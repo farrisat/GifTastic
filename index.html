@@ -5,19 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GifTastic</title>
+   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../GifTastic/assets/css/style.css">
 </head>
 <body>
-
+<div class = "background">
 <!--Space for all the giphy buttons-->
-<div id= "buttonDump"></div>
+<div id= "buttonDump" ></div>                     
 
 <!--  Input form and button to search new tv shows -->
     <form id="addShowForm">
-        <label for="show-input">Add a Show!</label>
-        <input type="text" id="show-input">
-        <br>
-        <input id="addShow" type="submit" value="Find a different GIF">
+        <label for="show-input"></label>
+        <input type="text" id="show-input" placeholder="Find a different GIF!">
+        <input id="addShow" type="submit" value="Submit">
     </form>
 
 <!-- Gif images container-->
@@ -31,6 +33,6 @@
 
  <!-- Script -->
  <script src="../GifTastic/assets/javascript/javascript.js"></script>
-
+</div>
 </body>
 </html>

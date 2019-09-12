@@ -15,19 +15,31 @@ function displayShowGifs() {
         method: "GET"
     }).then(function(response) {
    
+
+      
       var gifDiv = $("<div class = 'divGifStorage'>")  
       response.data.forEach(element => {
-  
+      
         var prefixURL = "https://media.giphy.com/media/" + element.id + "/"
         var gifURL = prefixURL + stillURL;
-        var gifImage =  $("<img>").attr("src", gifURL)
-        gifDiv.append(gifImage);
+        var gifImage =  $("<img>").attr("src", gifURL);
         gifImage.attr("data-prefixURL", prefixURL)
+
+        var imageDiv = $("<div>");
+        imageDiv.addClass("imageDiv")
+        var p = $("<p>").text("Rating: " + element.rating);
+        p.addClass("imageDiv")
+        imageDiv.append(gifImage);
+        imageDiv.prepend(p);
+        gifDiv.append(imageDiv);
+
+
+       
         gifImage.addClass("stop");
+        
         $("#gifs-view").prepend(gifDiv);
       });
 
-    
 
       $( ".stop" ).click(function() {
           var image = $(this)
@@ -42,7 +54,6 @@ function displayShowGifs() {
         else if (image.hasClass("stop")) {
       
           var prefix = image.attr("data-prefixURL");
-          console.log("I'm still here!");
           image.attr("src", prefix + animURL);
           image.removeClass("stop");
           image.addClass("start")

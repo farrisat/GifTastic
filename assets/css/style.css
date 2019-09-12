@@ -1,0 +1,67 @@
+@-ms-viewport{
+    width: device-width;
+  }
+
+.background {
+      background-color: #4AB9DC;
+  }
+
+/* GIF Button Formatting */
+#buttonDump {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   margin-bottom: 2%;
+    
+}
+.show-btn {
+  background-color: #F7B733;
+}
+
+/* Form Items */
+#addShowForm {
+    float:right;
+}
+
+#show-input {
+    background-color: #DFDCE3;
+}
+#addShow {
+    background-color: #3CC47C;
+    
+}
+
+/* End Form Items */
+
+#gifs-view{
+    flex-basis: 250px;
+    margin: none;
+    border: none;
+    width: min-content;
+    position: center;
+    
+}
+
+/* Extra small devices (phones, 600px and down)
+@media only screen and (max-width: 600px) {
+    .show-btn {
+        margin : 0px;
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    /* .show-btn {
+        
+}   */
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .show-btn {
+       align-content: center;
+       display: flex;
+       flex-direction: row-reverse;
+       justify-content: none;
+    }
+} 
+
+
